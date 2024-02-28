@@ -1,0 +1,108 @@
+Chapter 1 - Recap Points 
+
+- Hardware & Software 
+	- explanations & understanding 
+	- Apps & Operating Systems 
+
+- Programs 
+	- Instructions written by a programmer to perform a task 
+ 	- Programmers are creating software 
+
+- 3 Major operations of computers 	
+	- Input
+	- Processing 
+	- Output 
+
+	- Even though the 3 points are read as input first, processing second, and, output third. 
+	- It is important to understand that the order actually is input is first, output is meant to be 	understood after that, and then lastly processing, that guides you on how to get from the input to 	the output. 
+
+
+- Programming Languages 
+	- Write software 
+	- Syntax - rule that govern the lang. 
+	- Compiler / Interpreter 
+	- RAM - some level of importance must be placed on this when it comes to developing software 	programs
+
+- Programming Logic 
+	- Basic principles and concepts to develop a program 
+	- Logical operations 
+	- Key aspects 
+		- Variables 
+		- Data types 
+			integer float string character boolean	
+		- Control structures / Logical structures
+			sequential, decision, & loop 
+		- Functions 
+		
+	- Errors 
+		* Syntax errors 	
+			- mistakes in the language 
+		* Run-time errors 	
+			- mistakes that happen during the execution of the program
+		* Logical errors 
+			- incorrect development of instructions
+			- it is the programmers concern because the instructions were not properly developed 
+			- Program works but the answer outputted is incorrect
+
+- Problem Solving 
+	- six setps to help understand how to take a problem and attempt to solve it 
+- Program Development Cycle 
+	- In a similar style to the above problem solving steps, these steps helps you understand how to go 	about solving a problem and developing the program code for a thought out solution. 
+
+- Programming models 
+	- Procedural Programming - programs follow an order 
+	- Object-oriented Programming - code is enclosed within a space and used as required. 
+
+- The programming we are going to be doing in class 
+
+-- Algorithms 
+	- pseudocode is the language we are going to use 
+	- also has syntax rules 
+	- reserved words, cannot use these words for anything else other than what it is intended for:  
+	-- start, stop, declarations, input, output, if, then, endif, case, endcase, while, endwhile, do, 	for, to, step, 	endfor
+	** read the notes to have a much better understanding
+
+	Example 
+		0. Start 
+		1. 	input number 
+		2.	newNumber = number * 0.2 
+		3.	output newNumber 
+		4. Stop 
+
+-- Flowcharts 
+	- visual representation of an algorithm 
+	- each instruction will be drawn in the required shapes 
+	- start and stop - uses a rounded rectangle 
+	- input and output - uses a parallelogram 
+	- processing - calculations - a reactangle
+	- decisions and while loops - a diamond shape (the words will differentiate them) 
+	- for..loop - a heaxgon shape (4 pieces of information)
+	- flowlines - connectors - arrow lines that connect the flowchart to show the flow / execution of 	the program
+
+-- JavaScript
+	- HTML document - simple webpage calls the js file to be executed
+	- JS file contains the code 	
+	- Chrome browser and the Web Developer Extension (F12) to view the execution of the program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
