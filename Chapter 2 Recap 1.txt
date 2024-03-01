@@ -1,0 +1,430 @@
+Chapter 2 - Recap - Part 1 
+================================================================================================================================= 
+
+Variables 
+- A place in memory that is reserved where we can store data
+- It is allowed to change during the processing of a program 
+	
+Constant 
+- Constant is also a variable
+- BUT IT IS NOT ALLOWED TO CHANGE DURING THE PROCESSING OF A PROGRAM
+- 2 different types of constants: 
+	named constant (e.g. fltVatAmount = fltAmount * fltVAT) - fltVAT is the constant variable 
+	and 
+	literal constant (e.g. fltVatAmount = fltAmount * 0.15) - o.15 is the literal constant value  
+---------------------------------------------------------------------------------------------------------------------------------
+Examples ... (** this is discussed later in the notes - please make sure to read through it all **) 	
+
+	** in pseudocode 
+================================================================================================================================= 
+	num intCount 	// declaring a variable 
+	...
+	intCount = 1	// assigning a value later in the code 	 	
+
+================================================================================================================================= 
+	num intCount2 = 0 
+	// declaring a variable and assigning a value at declaration  
+
+================================================================================================================================= 
+	num fltVAT = 0.15 // constant variable 
+
+================================================================================================================================= 
+
+	** javascript 
+================================================================================================================================= 
+	let intCount; 
+	intCount = 1; 
+	
+	let intCount2 = 0; 
+
+	const fltVAT = 0.15; 
+---------------------------------------------------------------------------------------------------------------------------------
+Data types 
+- classification of a variable being declared 
+- tells the compiler how the program intends to use the data 
+
+
+================================================================================================================================= 
+** SIDE NOTE ** 
+================================================================================================================================= 
+- While there are the key data types that are discussed in class, it is important to realise just how much is out 
+- there in the different programming languages 
+
+================================================================================================================================= 
+Java - https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+	Primitive types 	Size 			Value Range 
+	- boolean 		1 bit 
+
+	- byte  		1 byte (8 bits)		-128 to +127 (inclusive)
+	- short  		2 bytes (16 bits)	-32,768 to +32,767 (inclusive)
+	- int 			4 bytes (32 bits)	-2,147,483,648 to 2,147,483,647 (inclusive)
+	- long 			8 bytes (64 bits)	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 (inclusive)
+	
+	- float			4 bytes (32 bits)
+	- double 		8 bytes (64 bits)
+
+	- char			2 bytes (16 bits)
+---------------------------------------------------------------------------------------------------------------------------------
+C# - https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/integral-numeric-types
+================================================================================================================================= 
+- In class I had briefly shared with you the following information, that we have different numbering systems  
+
+- Decimal - 10 digits, 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9 
+- These 10 digits is what we have learnt throughout ... we learnt how to combine these 10 digits to make numbers that meant 
+- something and used them in calculations. Remember, units, tens, hundereds, thousands, etc. 
+
+- But there are other numbering systems that are known and used ... 
+
+- Octal - 8 digits, 0, 1, 2, 3, 4, 5, 6, and 7
+
+- Hexadecimal - 16 digits, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, AND F 
+- One example of where you will use this numbering system is web-based colours 
+	- e.g. #FFFFFF 
+	- each pair of values (FF) is a value ranging from 0 to 255 in decimal  
+	- so when we read the colour - Red (FF) Green (FF) & Blue (FF) gives us white 
+
+---------------------------------------------------------------------------------------------------------------------------------
+- Now the reason for bringing this up about different numbering systems is because the next numbering system is used by computers
+
+- Binary - 2 digits, 0, and 1
+- We learn the following: 
+	a bit is 1 binary digit - a 0 or 1  
+	a byte is 8 bits - of zero's and one's - 1010 1111
+	- in decimal 1 + 1 = 2 | in binary 1 + 1 = 10 ... its the same 
+
+- Now take a look again at the above links that were shared - the data types list for Java and C# 
+- The size of the data types are listed at bits and bytes - and when you understand and convert an 8-bit number 
+- e.g. 0000 0000 to 1111 1111 in binary is 0 to 255 in decimal 
+- 2 ^ 8 = 256 - 8 bits gives us a value set of 256 numbers - now look again that the byte data type in Java 
+- -128 to +127 including both these numbers and 0 - is 256 different numbers ... 
+---------------------------------------------------------------------------------------------------------------------------------
+- So the point being made is that since the machine understands binary, it is converted to a numbering system that we understand,  decimal and it is this numbering system, that shows us the limitations to the types themselves that dictates what we can actually store in these variables
+---------------------------------------------------------------------------------------------------------------------------------
+
+- The most common data types that we will be learning in class is ... 
+	** Numeric, String/Character and Boolean ** 
+	
+- Within the numeric section there are 2 types that we will have an understanding for... 
+	- integer 		- these are our whole numbers, both positive and negative  
+	- floating-point 	- these are out real numbers, with a decimal point, again, both positive and negative  
+
+	- While there are variations - noting the information shared above ... we will stick to understanding the simple 
+	- integer (whole numbers) & floating-point (real numbers)
+
+- Within the string/character section there are 2 types - string and character, both have the ability to store alphanumeric 
+- characters. 
+ 
+	- string 		- always are enclosed inside of a pair of double inverted commas "words words"  
+	- character 		- single characters from the character set either single or double inverted commas 
+				- 'c', "c", '7', "&", "*", " " (even a space is a character)
+
+- Boolean is a special type of data type that only stores one of 2 values, either true or false 
+	- We will use this type when there is a choice that needs to be determined 
+
+---------------------------------------------------------------------------------------------------------------------------------
+In Java when we need to declare a variable, the data type is required (this is sometimes known as type-safety)
+
+- declaring an integer: 	int intNumber; 
+ 
+But in JavaScript - it is told that we do not require the data type to be mentioned. 
+- declaring an integer:		let intNumber;
+
+- The data type is determined when the program is executed, while it is not immediately a concern for us, it will be important 
+ that we understand when naming a variable that our intention is to store that type of value for the program. 
+---------------------------------------------------------------------------------------------------------------------------------
+
+** pseudocode 
+** read the points on Pg 17 again 
+
+0. Start 
+1. Declarations 
+	num intNumber
+	num intAnswer 
+
+2. 	input intNumber 
+3.	intAnswer = intNumber * 2 
+
+4.	output intAnswer 
+
+5. Stop 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Naming of variables
+- it is important that we all have an understanding of the name chosen and what is the variable going to be used for. 
+- single words are the better option, but may not always be the case 
+
+- e.g. 	Full Name 	- might choose fullName but fName, while abbreviated, doesn't immediately make sense  
+	Surname   	- possible choices: surname / lastName 
+	Price 	  	- price
+	Sale Price	- salePrice  
+	Discount Price 	- discPrice 
+
+- Remember that in class, we will be using the standard that a prefix of 3 characters (all small letters) will be used in the name to inform us of the data type of the variable being declared. 
+- Also that if multiple words are used, then each word will begin with a capital letter. 
+
+	Company Name 	- strCompanyName // a company name variable that will be of type string 
+
+	a Contact person at a company 
+	- strCompanyContactName, seems a little too long 
+
+	- strCompContName, the shortened form looks a little better, but if another programmers read this, would they immediately
+	- understand this. Adding a comment at the declaration, might help. 
+
+	string strCompContName // company contact person	  
+
+	other examples using the prefix within the Declarations statement in an algorithm: 
+	0. Start 
+	1. Declarations 
+		string strFullName
+		string strLastName 
+		string strFName 	// this is the full name 
+
+		string chrThatOneCharacter 
+		
+		num fltPrice 
+		num fltSalePrice 
+		num fltDiscPrice 
+	
+		num intNumber 
+		num intCount = 0 
+
+		boolean blnCheck 
+		boolean blnVerified 
+
+	2.	... [rest of the code]
+
+- We are allowed to "separate" the words by using an underscore, but in this class, I would prefer that you do not use this method. 
+	- string strLast_Name 
+	
+- Since in an algorithm, there isn't a specific keyword for a constant, we would code the name of the variable using capital letters. The prefix will still remain to be small letters. The value must be assigned at declaration. Adding a comment would just be good practice to help inform anyone reading the code that this is meant to be a constant. 
+
+	1. Declarations 
+		num fltVAT = 0.15 //constant 
+		string strCOMPANYNAME = "Wood Works Inc" //constant
+		num fltPI = 3.14 //constant
+
+	** in JavaScript 		
+		const fltVAT = 0.15; //constant
+		const fltPI = 3.14; //constant
+			
+---------------------------------------------------------------------------------------------------------------------------------	Assignment statements 
+
+- We remember this from school days: x = a + b
+- But we read it differently here in programming: the variable on the left is assigned the value of the expression on the 
+- right-hand side. 
+
+- Examples - take note of what we had discussed in class about this - the repeating of the variable on the right has an 
+- understanding with regards to this type of statement 
+ 
+	intCount = intCount + 1 // intCount = 0 + 1 
+	fltTotal = fltTotal + fltPrice 
+
+	intSide = 4 
+	intArea = intSide * intSide 
+
+	blnTVLicense = true 
+
+	strLastName = "Black" 
+---------------------------------------------------------------------------------------------------------------------------------
+Input 
+- Accepting a value entered into the program by the user must go somewhere. The input statement tells us that the value entered is saved inside of the variable being mentioned 
+
+	input strName
+
+- Good practice for the future will mean that as programmers, we should ask the user the question/statement to please enter the required value and then to code the input statement 
+
+	output "Please enter your age" // displayed to user to "wait" for the input 
+	input intAge // the value entered is saved inside of the intAge variable 
+
+---------------------------------------------------------------------------------------------------------------------------------
+Output 
+- Displaying statements to the user. 
+- One example is above ... ask the question and then wait for the input. 
+
+- The following is an example of displaying an answer that was calculated back to the user. 
+- Please take note of the + symbol, that is not addition, but concatenation, where we are joining a string with the variable, to show the user a complete sentence. 
+ 
+	output "The average age of the class is: " + flgAvgAge 
+
+- Also not always the case the use the variable at the end (like above) - there are variations. 
+- The following is an example of asking the user for a student's test 1 mark, but to use the student's name in the question so that it looks more user-friendly 
+
+	output "Enter " + strStudentName + " test 1 mark " // requset the student's mark 
+
+---------------------------------------------------------------------------------------------------------------------------------
+Comments 
+
+	// comments on one line needs the double forward slash
+
+	// comments like these can also appear on the same line where there is code 
+	intCount = intCount + 1 // incrementing the counter 
+
+- You can type comments on mutiple lines, like the below
+
+	// requesting 
+	// the 
+	// students 
+	// mark
+ 
+- But this is not immediately good practice - use the following /* */ set as shown below: 
+
+	/*
+	 This 
+	dfsjkfsjkdfsd
+	ddfsdfsdf
+	*/
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Functions - read Pg 34..35
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+ 
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+
+
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------- 
+	intAns = intNum ^ 3 
+	intAns = intNum ** 3 
+
+
+	intArea = intSide * intSide 
+
+	7 / 2   = 3.5
+	7 \ 2   = 3
+	7 MOD 2 = 1
+
+	intCount = intCount + 1 
+	intCount = intCount - 1 
+
+	7 > 2 true 
+	
+	7 >= 7 true  
+	7 > 7  false 
+
+	
+
+	operator + - 
+
+	operand A + B 
+		intCount + 1
+
+	'A' > 'H'
+
+--------------------------------------------------------------------------------------------------------------------------------- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
